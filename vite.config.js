@@ -10,5 +10,8 @@ export default defineConfig({
     ],
     optimizeDeps: {
         include: ['jquery']  // Pastikan jQuery dioptimalkan oleh Vite
-    }
+    },
+    server: {
+        https: true,  // Pastikan menggunakan HTTPS
+    },
 });
