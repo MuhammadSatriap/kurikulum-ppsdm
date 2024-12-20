@@ -50,7 +50,7 @@ Route::prefix('show/{id_pelatihan}')->group(function () {
         Route::delete('elemen-kompetensi/{kode_elemen}', [ElemenKompetensiController::class, 'destroy'])->name('elemen_kompetensi.destroy');
 
         /* Kriteria */
-        Route::prefix('elemen-kompetensi/{kode_elemen}')->group(function () {
+        Route::prefix('/{kode_elemen}')->group(function () {
             Route::get('kriteria', [KriteriaController::class, 'show'])->name('kriteria.show');
             Route::get('kriteria/create', [KriteriaController::class, 'create'])->name('kriteria.create');
             Route::post('kriteria', [KriteriaController::class, 'store'])->name('kriteria.store');
