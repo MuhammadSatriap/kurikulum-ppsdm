@@ -12,9 +12,8 @@ export default defineConfig({
         include: ['jquery'],  // Pastikan jQuery dioptimalkan oleh Vite
     },
     server: {
-        proxy: {
-            // Menyambungkan semua permintaan yang dimulai dengan "/api" ke backend yang berjalan di port 9000
-            '/': 'http://kurikulum-ppsdm-production.up.railway.app/', // Ganti dengan URL backend Anda
-        },
+        host: '0.0.0.0', // Agar Vite dapat diakses dari luar
+        port: parseInt(process.env.PORT) || 5173, // Gunakan port yang ditentukan Railway
     },
+
 });
