@@ -14,7 +14,7 @@ export default defineConfig({
     server: {
         proxy: {
             // Menyambungkan semua permintaan yang dimulai dengan "/api" ke backend yang berjalan di port 9000
-            '/api': 'http://kurikulum-ppsdm-production.up.railway.app/', // Ganti dengan URL backend Anda
+            '/': 'http://kurikulum-ppsdm-production.up.railway.app/', // Ganti dengan URL backend Anda
         },
     },
 });
