@@ -1,0 +1,19 @@
+// Impor variabel Bootstrap terlebih dahulu
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+/* app.scss */
+
+ol.alpha {
+    list-style-type: upper-alpha;  /* Gunakan huruf kapital A, B, C, ... */
+    padding-left: 20px;  /* Menambah indentasi pada list */
+}
+
+// Ganti variabel font Bootstrap
+$font-family-sans-serif: 'Poppins', sans-serif !default;
+
+
+// Impor seluruh Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* app.scss */
+
+
+
+$font-family-sans-serif: 'Poppins', sans-serif !default;
+
+@import "summernote/dist/summernote-lite.min.css";
+
+
+// Override font di awal sebelum Bootstrap
+
+@import 'bootstrap/scss/bootstrap';

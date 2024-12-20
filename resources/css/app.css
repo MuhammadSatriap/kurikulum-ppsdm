@@ -1,0 +1,99 @@
+/* Mengatur font default untuk seluruh halaman */
+:root {
+    --bs-font-sans-serif: 'Poppins', sans-serif !important;
+}
+
+
+body, html, h1, h2, h3, h4, h5, h6, p, a, span, div,
+input, textarea, button, select, label, table, th, td {
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur ukuran font default dan warna */
+body {
+    font-size: 16px;
+    color: #333; /* Warna teks default */
+    background-color: #f8f9fa; /* Warna latar belakang */
+}
+
+/* Gaya untuk heading */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Gaya untuk paragraf */
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Gaya untuk tautan */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Gaya tombol */
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button.btn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0.25rem;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Input dan textarea */
+input, textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+thead th {
+    background-color: #e9ecef;
+}
+
+/* Tambahkan media query untuk responsif */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
