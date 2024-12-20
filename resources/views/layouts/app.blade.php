@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" href="{{ asset('dashboard')}}/images/favicon.png" />
+    <link rel="shortcut icon" href="{{ secure_url(asset('dashboard/images/favicon.png')) }}" />
+
 
 
     <!-- Custom CSS -->
