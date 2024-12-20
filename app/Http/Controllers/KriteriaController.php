@@ -8,7 +8,7 @@ use Illuminate\View\View;
 use App\Models\ElemenKode;
 use App\Models\Kompetensi;
 use Illuminate\Http\Request;
-use App\Models\Elemenkompetensi;
+use App\Models\ElemenKompetensi;
 
 class KriteriaController extends Controller
 {
@@ -22,7 +22,7 @@ class KriteriaController extends Controller
         $kompetensi = Kompetensi::where('kode_kompetensi', $kode_kompetensi)->firstOrFail();
 
         // Ambil elemen kompetensi yang terkait berdasarkan kode kompetensi dan kode elemen
-        $elemenkompetensi = Elemenkompetensi::where('kode_kompetensi', $kode_kompetensi)
+        $elemenkompetensi = ElemenKompetensi::where('kode_kompetensi', $kode_kompetensi)
                                             ->where('kode_elemen', $kode_elemen)
                                             ->firstOrFail();
 
@@ -48,7 +48,7 @@ class KriteriaController extends Controller
         $kompetensi = Kompetensi::where('kode_kompetensi', $kode_kompetensi)->firstOrFail();
 
         // Ambil elemen kompetensi berdasarkan kode elemen
-        $elemenkompetensi = Elemenkompetensi::where('kode_kompetensi', $kode_kompetensi)
+        $elemenkompetensi = ElemenKompetensi::where('kode_kompetensi', $kode_kompetensi)
                                             ->where('kode_elemen', $kode_elemen)
                                             ->firstOrFail();
 
