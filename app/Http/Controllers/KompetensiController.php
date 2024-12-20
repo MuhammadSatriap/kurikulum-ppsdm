@@ -6,7 +6,7 @@ use App\Models\Pelatihan;
 use Illuminate\View\View;
 use App\Models\Kompetensi;
 use Illuminate\Http\Request;
-use App\Models\Elemenkompetensi;
+use App\Models\ElemenKompetensi;
 
 class KompetensiController extends Controller
 {
@@ -50,7 +50,7 @@ class KompetensiController extends Controller
         // Ambil data kompetensi berdasarkan kode kompetensi
         $kompetensi = Kompetensi::where('kode_kompetensi', $kode_kompetensi)->firstOrFail();
 
-        $elemenkompetensi = Elemenkompetensi::where('kode_kompetensi', $kode_kompetensi)->get();
+        $elemenkompetensi = ElemenKompetensi::where('kode_kompetensi', $kode_kompetensi)->get();
 
         // Return view dengan data yang diperlukan
         return view('kompetensi.show', compact('kompetensi', 'pelatihan', 'elemenkompetensi'));
@@ -135,7 +135,7 @@ class KompetensiController extends Controller
     public function destroy($id_pelatihan, $kode_kompetensi)
     {
         // Hapus elemen yang terkait dengan kompetensi
-        Elemenkompetensi::where('kode_kompetensi', $kode_kompetensi)->delete();
+        ElemenKompetensi::where('kode_kompetensi', $kode_kompetensi)->delete();
 
         // Hapus data kompetensi
         $kompetensi = Kompetensi::where('kode_kompetensi', $kode_kompetensi)
