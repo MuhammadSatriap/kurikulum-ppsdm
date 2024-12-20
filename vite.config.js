@@ -9,11 +9,6 @@ export default defineConfig({
         }),
     ],
     optimizeDeps: {
-        include: ['jquery'],  // Pastikan jQuery dioptimalkan oleh Vite
-    },
-    server: {
-        host: '0.0.0.0', // Agar Vite dapat diakses dari luar
-        port: parseInt(process.env.PORT) || 5173, // Gunakan port yang ditentukan Railway
-    },
-
+        include: ['jquery']  // Pastikan jQuery dioptimalkan oleh Vite
+    }
 });
